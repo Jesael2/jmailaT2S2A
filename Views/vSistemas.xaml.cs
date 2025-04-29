@@ -2,10 +2,15 @@ namespace jmailaT2S2A.Views;
 
 public partial class vSistemas : ContentPage
 {
-	public vSistemas()
+    string usuario;
+	public vSistemas(string nombreUsuario)
 	{
         InitializeComponent();
+        usuario = nombreUsuario;
+
+        Title = $"Sistema de {usuario}";
     }
+
 
     private void btnEstudiantes_Clicked(object sender, EventArgs e)
     {
@@ -50,6 +55,7 @@ public partial class vSistemas : ContentPage
             $"Nota Parcial 2: {parcial2}\n" +
             $"Nota Final: {notaFinal}\n" +
             $"Estado: {estado}", "Cerrar");
+
 
     }
 

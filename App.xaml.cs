@@ -7,10 +7,13 @@ namespace jmailaT2S2A
         public App()
         {
             InitializeComponent();
+            
         }
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new Views.vSistemas());
+            return new Window(new NavigationPage(new vLogin()));
+
+
         }
     }
 }
